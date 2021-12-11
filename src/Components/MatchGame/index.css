@@ -19,6 +19,8 @@
   align-self: stretch;
   padding-left: 15px;
   padding-right: 15px;
+  padding-top: 0px;
+  margin: 0px;
 }
 .score-time-header-card {
   display: flex;
@@ -28,6 +30,11 @@
 }
 .match-logo-image-style {
   width: 200px;
+}
+@media screen and (max-width: 576px) {
+  .match-logo-image-style {
+    width: 100px;
+  }
 }
 .time-left-container {
   display: flex;
@@ -64,9 +71,21 @@
   justify-content: center;
   align-items: flex-start;
 }
+@media screen and (max-width: 576px) {
+  .below-header-section {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
 .displayed-picture {
   width: 680px;
   align-self: center;
+}
+@media screen and (max-width: 576px) {
+  .displayed-picture {
+    width: 100%;
+  }
 }
 .tabs-container {
   display: flex;
@@ -77,12 +96,22 @@
   width: 450px;
   margin-top: 25px;
 }
+
 .tab-items-container {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: center;
   padding-top: 15px;
   flex-wrap: wrap;
   width: 680px;
+}
+@media screen and (max-width: 576px) {
+  .tab-items-container {
+    width: 100%;
+  }
+}
+
+ul {
+  padding-left: 0px;
 }

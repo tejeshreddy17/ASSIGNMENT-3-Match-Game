@@ -258,7 +258,7 @@ class MatchGame extends Component {
     selectedTab: tabsList[0].tabId,
     displayedPicture: imagesList[0],
     score: 0,
-    timeLeft: 5,
+    timeLeft: 60,
     isMatchRunning: true,
   }
 
@@ -327,26 +327,26 @@ class MatchGame extends Component {
     )
     return (
       <div className="background-card">
-        <div className="header-card">
+        <ul className="header-card">
           <img
             className="match-logo-image-style"
             src="https://assets.ccbp.in/frontend/react-js/match-game-website-logo.png "
             alt="website logo"
           />
-          <div className="score-time-header-card">
+          <li className="score-time-header-card">
             <p className="score-heading-style">
               Score: <span className="score-style">{score}</span>
             </p>
-            <div className="time-left-container">
+            <li className="time-left-container">
               <img
                 alt="timer"
                 className="timer-logo"
                 src="https://assets.ccbp.in/frontend/react-js/match-game-timer-img.png"
               />
-              <h1 className="timer-style">{timeLeft} Sec</h1>
-            </div>
-          </div>
-        </div>
+              <p className="timer-style">{timeLeft} sec</p>
+            </li>
+          </li>
+        </ul>
 
         {isMatchRunning ? (
           <div className="below-header-section">
@@ -355,7 +355,7 @@ class MatchGame extends Component {
               className="displayed-picture"
               src={displayedPicture.imageUrl}
             />
-            <div className="tabs-container">
+            <ul className="tabs-container">
               {tabsList.map(eachTab => (
                 <Tabs
                   tabselected={this.tabselected}
@@ -364,8 +364,8 @@ class MatchGame extends Component {
                   isTabselected={selectedTab === eachTab.tabId}
                 />
               ))}
-            </div>
-            <div className="tab-items-container">
+            </ul>
+            <ul className="tab-items-container">
               {filteredList.map(eachimageList => (
                 <TabItems
                   clickingImages={this.clickingImages}
@@ -373,7 +373,7 @@ class MatchGame extends Component {
                   key={eachimageList.id}
                 />
               ))}
-            </div>
+            </ul>
           </div>
         ) : (
           <ScoreDisplayCard playagain={this.playagain} score={score} />

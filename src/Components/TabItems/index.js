@@ -8,12 +8,14 @@ const TabItems = props => {
   }
   return (
     <li>
-      <img
-        className="thumbail-style"
-        alt="thumbnail"
-        onClick={onclickingImages}
-        src={thumbnailUrl}
-      />
+      <button type="button" className="thumbnailButton">
+        <img
+          className="thumbail-style"
+          alt="thumbnail"
+          onClick={onclickingImages}
+          src={thumbnailUrl}
+        />
+      </button>
     </li>
   )
 }

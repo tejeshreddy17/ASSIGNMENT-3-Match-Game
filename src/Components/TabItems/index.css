@@ -1,8 +1,18 @@
 .thumbail-style {
-  height: 130px;
-  width: 130px;
+  height: 120px;
+  width: 120px;
   margin-top: 15px;
 }
 li {
   list-style-type: none;
+}
+.thumbnailButton {
+  background-color: transparent;
+  border: none;
+}
+@media screen and (max-width: 576px) {
+  .thumbail-style {
+    height: 100px;
+    width: 100px;
+  }
 }
